@@ -1,17 +1,14 @@
 <?php
 
-class Arquero extends Personaje{
+    class Arquero extends Personaje{
 
-    protected $Arco;
-    protected $Flechas;
+        protected $Arco;
+        protected $Flechas;
 
-    public function __construct()
-    {
-      parents::__construct($nom);  
-    } 
-    {
-        
+        public function __construct(){
+          parents::__construct($nom);  
+        } 
+
     }
-}
 
 ?>
