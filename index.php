@@ -3,7 +3,7 @@
     require_once 'batalla.php';
     require_once 'Guerrero.php';
     require_once 'arquero.php';
-    $personaje1=New Personaje('Javi');
+    $personaje1=New Arquero('Javi');
     echo $personaje1;
     $batalla=new Batalla();
     $personaje1->luchar($batalla->luchan());
