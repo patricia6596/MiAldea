@@ -1,6 +1,5 @@
 <?php
-    class Personaje 
-    {
+    class Personaje {
         protected $nombre;
         protected $tipo;
         protected $puntos=0; 
@@ -10,7 +9,8 @@
             $this->nombre=$nom;
         }
         public function luchar(){
-            
+            //Llama a la funcion luchan de personajes
+            Personaje::luchan();
         }
          
         public function conseguirArma($arma){
