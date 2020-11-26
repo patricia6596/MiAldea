@@ -1,3 +1,3 @@
 # MiAldea
 Proyect of Implementation of Web Applications
-ee
+hola hoy hemos creado el sistema de batallas 
