@@ -1,5 +1,6 @@
 <?php
 
+//Implementar el patron decorator
 class Guerrero extends Personaje {
     public $espada;
     public $escudo ;
