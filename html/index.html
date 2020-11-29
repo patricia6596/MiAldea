@@ -1,0 +1,89 @@
+<!doctype html>
+<html>
+	<head> 
+		<title>Tu juego Favorito</title>
+        <meta charset=”utf-8”/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link   rel="stylesheet"  href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+		<link rel="stylesheet" type="text/css" href="css/custom.css">
+        <link rel="icon" type="image/vnd.microsoft.icon" href="img/icono.png">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+	</head> 
+	<body>
+
+		<!--Aqui va el menu, que contiene 4 botones para navegar en la pagina y 2 para registro e iniciar sesion-->
+
+		<div class="container">
+			<nav class="navbar navbar-expand-md navbar-dark fixed-top mibg">
+                <div class="container">
+					<img src="img/icono.png" class="bg-white" style="width:60px;">	
+                    <ul class="nav">
+                        <li>
+                            <button type="button" class="btn btn-dark m-1" data-toggle="modal" data-target="#login">Login</button>
+                        </li>
+                        <li>
+                            <button type="button" class="btn btn-dark m-1" data-toggle="modal" data-target="#registro">Registro</button>
+                        </li>
+                    </ul>
+                </div>
+			</nav>
+		
+			<div class="modal" id="login"> 
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-header mibg">
+							<h4 class="modal-title">Iniciar sesion</h4>
+							<button type="button" class="close" data-dismiss="modal">&times;</button>
+						</div>
+						<div class="modal-body">
+							<form method="post" action="accion.php">
+								<div class="form-group">
+									<label>Nombre:</label>
+									<input type="text" class="form-control" placeholder="Introduzca su nombre" name="nombre">
+								</div>
+								<div class="form-group">
+									<label>Contraseña:</label>
+									<input type="password" class="form-control" placeholder="Introduzca su contraseña" name="contr">
+								</div>
+						</div>
+						<div class="modal-footer"> 
+							<button type="submit" class="btn mibg" name='iniciar' value='iniciar'>Iniciar sesión</button>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="modal" id="registro">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-header mibg">
+							<h4 class="modal-title">Registro de usuario</h4>
+							<button type="button" class="close" data-dismiss="modal">&times;</button>
+						</div>
+						<div class="modal-body">
+							<form method="post" action="accion.php" class="form">
+								<div class="form-group">
+									<label>Nombre:</label>
+									<input type="text" class="form-control" name="nombre">
+								</div>
+								<div class="form-group">
+									<label>Nick:</label>
+									<input type="text" class="form-control" name="nick">
+								</div>
+								<div class="form-group">
+									<label>Contraseña:</label>
+									<input type="password" class="form-control" name="contr">
+								</div>		
+						</div>
+						<div class="modal-footer">
+							<button type="submit" class="btn mibg" name='insertar' value='insertar'>Registrar</button>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
