@@ -1,6 +1,6 @@
 <?php
     require_once 'incluirficheros.php';
-    $personaje1=New Arquero('Javi');
+    $personaje1=New Personaje('Javi','pechus','soytonto');
     echo $personaje1;
     echo " <br>";
     $batalla=new Batalla();
@@ -68,5 +68,10 @@
         echo 'Sigue intentandolo';
     }
 
-   
+    echo 'Conectando a la base de datos<br>';
+    $conexion=new Db();
+    $conexion->consultar();
+    echo "<br>";
+    $conexion->insertar($personaje1->getNombre(), $personaje1->getNick(), $personaje1->getContr(), $personaje1->getTipo(), $personaje1->getCasa(), $personaje1->getArma());
+
 ?>

@@ -26,19 +26,19 @@
             $select -> execute();
             $lista = $select -> fetchAll(PDO::FETCH_ASSOC);
             foreach($lista as $usuario) {
-                echo $usuario['id'] . $usuario ['nombre'];
+                echo $usuario['id'] . $usuario ['nick'];
             }
         }
-        public function insertar($jugador){
-            $insert = $this->db -> prepare("insert into jugadores values (default, )");
+        public function insertar($nom, $nick, $contr, $tipo, $casa, $arma){
+            $insert = $this->db -> prepare("insert into jugadores values (default, '$nom', '$nick', '$contr', '$tipo', '$casa', '$arma')");
             $insert -> execute();
         }
-        public function actualizar($sql){
-            $upload = $this->db -> prepare("update jugadores set personaje='mago' where nick='patri'");
+        public function actualizar($nick, $tipo, $casa, $arma){
+            $upload = $this->db -> prepare("update jugadores set personaje='$tipo', casa='$casa', arma='$arma' where nick='$nick'");
             $upload -> execute();
         }
-        public function borrar($sql){
-            $delete = $this->db -> prepare("delete from jugadores where nick='patric'");
+        public function borrar($nick){
+            $delete = $this->db -> prepare("delete from jugadores where nick='$nick'");
             $delete -> execute();
         }
     }

@@ -1,13 +1,39 @@
 <?php
     class Personaje {
         protected $nombre;
+        protected $nick;
+        protected $contr;
         protected $tipo;
+        protected $casa;
         private $puntos;
-        protected $arma=array();
+        protected $arma;
 
-        public function __construct($nom){
+        public function __construct($nom, $nick, $contr){
             $this->nombre=$nom;
+            $this->nick=$nick;
+            $this->contr=$contr;
             $this->puntos=0;
+            $this->tipo='null';
+            $this->casa='paja';
+            $this->arma='null';
+        }
+        public function getNombre(){
+            return $this->nombre;
+        }
+        public function getNick(){
+            return $this->nick;
+        }
+        public function getContr(){
+            return $this->contr;
+        }
+        public function getTipo(){
+            return $this->tipo;
+        }
+        public function getCasa(){
+            return $this->casa;
+        }
+        public function getArma(){
+            return $this->arma;
         }
         public function luchar($resultado){
             //Llama a la funcion luchan de personajes
@@ -27,10 +53,6 @@
         }
         public function devolverPuntos(){
             return $this->puntos;
-        }
-        public function conseguirArma($arma){
-            //Añadira un arma al array armas;
-            $this->arma[]=$arma;
         }
         public function __toString(){
             return "El personaje se llama $this->nombre";
