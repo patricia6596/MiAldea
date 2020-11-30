@@ -20,7 +20,15 @@
     echo " <br>";
     $personaje1->luchar($batalla->luchan());
     echo " <br>";
-    $personaje1->imprimirPuntos();
+    $personaje1->luchar($batalla->luchan());
+    echo " <br>";
+    $personaje1->luchar($batalla->luchan());
+    echo " <br>";
+    $personaje1->luchar($batalla->luchan());
+    echo " <br>";
+    $personaje1->luchar($batalla->luchan());
+    echo " <br>";
+    echo $personaje1->devolverPuntos();
     
     echo " <br>";
 
@@ -28,7 +36,7 @@
 
     echo '<h2>Crear objetos</h2>';
 
-    if($personaje1->almacenarPuntos($personaje1->imprimirPuntos())>='10'){
+    if($personaje1->devolverPuntos()>='10' && $personaje1->devolverPuntos() < '15'){
         $eleccion=1;
         if($eleccion == '1'){
             $objetos = new Objeto();
@@ -41,10 +49,11 @@
         }else{
             echo 'los puntos se acumulan';
         }
-    }else if($personaje1->almacenarPuntos($personaje1->imprimirPuntos())>='15'){
+    }else if($personaje1->devolverPuntos()>='15'){
         echo '<h3>Aqui podemos elegir entre armas o casas:</h3>';
         $eleccion=1;
         if($eleccion == '1'){
+            $objetos = new Objeto();
             $objetos->establecer_arma('
             espada,
             Enhorabuena has obtenido una espada
