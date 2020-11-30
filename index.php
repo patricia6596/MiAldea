@@ -1,9 +1,5 @@
 <?php
-    require_once 'personajes.php';
-    require_once 'batalla.php';
-    require_once 'Guerrero.php';
-    require_once 'arquero.php';
-    require_once 'objetos.php';
+    require_once 'incluirficheros.php';
     $personaje1=New Arquero('Javi');
     echo $personaje1;
     echo " <br>";
