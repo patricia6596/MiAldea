@@ -5,6 +5,7 @@
     require_once 'batalla.php';
     require_once 'Guerrero.php';
     require_once 'arquero.php';
+    require_once 'mago.php';
     require_once 'objetos.php';
     
 ?>

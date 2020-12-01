@@ -13,9 +13,8 @@
             $this->nick=$nick;
             $this->contr=$contr;
             $this->puntos=0;
-            $this->tipo='null';
             $this->casa='paja';
-            $this->arma='null';
+            $this->arma='nivel1';
         }
         public function getNombre(){
             return $this->nombre;

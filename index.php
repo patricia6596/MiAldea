@@ -1,6 +1,6 @@
 <?php
     require_once 'incluirficheros.php';
-    $personaje1=New Personaje('Javi','pechus','soytonto');
+    $personaje1=New Guerrero('Javis','pechuss','soytontso');
     echo $personaje1;
     echo " <br>";
     $batalla=new Batalla();
