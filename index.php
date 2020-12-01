@@ -67,11 +67,13 @@
     }else{
         echo 'Sigue intentandolo';
     }
-
+    echo "<br>";
     echo 'Conectando a la base de datos<br>';
     $conexion=new Db();
-    $conexion->consultar();
+    echo $conexion->consultar('nick','pechus');
     echo "<br>";
     $conexion->insertar($personaje1->getNombre(), $personaje1->getNick(), $personaje1->getContr(), $personaje1->getTipo(), $personaje1->getCasa(), $personaje1->getArma());
-
+    echo "<br>";
+    $personaje2=new Arquero('Patricia','pattricia','adios');
+    $conexion->insertar($personaje2->getNombre(), $personaje2->getNick(), $personaje2->getContr(), $personaje2->getTipo(), $personaje2->getCasa(), $personaje2->getArma());
 ?>

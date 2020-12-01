@@ -21,17 +21,26 @@
             }
             return self::$conexion;
         }
-        public function consultar(){
-            $select = $this->db -> prepare("select * from jugadores");
+        public function consultar($campo, $valor){
+            $select = $this->db -> prepare("select * from jugadores where $campo='$valor'");
             $select -> execute();
             $lista = $select -> fetchAll(PDO::FETCH_ASSOC);
             foreach($lista as $usuario) {
-                echo $usuario['id'] . $usuario ['nick'];
+                if ($usuario['control']=='control'){
+                    return 1;
+                }else{
+                    return 0;
+                };
             }
         }
         public function insertar($nom, $nick, $contr, $tipo, $casa, $arma){
-            $insert = $this->db -> prepare("insert into jugadores values (default, '$nom', '$nick', '$contr', '$tipo', '$casa', '$arma')");
-            $insert -> execute();
+            if(!$this->consultar('nick',$nick)){
+                $insert = $this->db -> prepare("insert into jugadores values (default, '$nom', '$nick', '$contr', '$tipo', '$casa', '$arma', 'control')");
+                $insert -> execute();
+                echo "Usuario agregado correctamente";
+            }else{
+                echo "Este usuario ya existe";
+            }
         }
         public function actualizar($nick, $tipo, $casa, $arma){
             $upload = $this->db -> prepare("update jugadores set personaje='$tipo', casa='$casa', arma='$arma' where nick='$nick'");
