@@ -32,6 +32,7 @@
 
     echo '<h2>Crear objetos</h2>';
 
+<<<<<<< Updated upstream
     if($personaje1->devolverPuntos()>='10' && $personaje1->devolverPuntos() < '15'){
         $eleccion=1;
         if($eleccion == '1'){
@@ -68,6 +69,11 @@
         echo 'Sigue intentandolo';
     }
     echo "<br>";
+=======
+    $objeto1= new Objeto();
+    echo $objeto1->mejorarCasa($personaje1);
+    echo $objeto1->mejorarArma($personaje1);
+>>>>>>> Stashed changes
     echo 'Conectando a la base de datos<br>';
     $conexion=new Db();
     echo $conexion->consultar('nick','pechus');

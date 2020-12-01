@@ -46,20 +46,45 @@ class Objeto implements Casa, Arma {
             return print($html);
         }
     
-    /*
-    public function mejorar(){
-        
-        if(Personaje::$puntos>=10){
-            echo "puedes obtener una casa o seguir acumulando puntos";
-            echo " <br>";
-        } else if(Personaje::$puntos>=15){
-            echo "puedes obtener una casa o mejorar tu arma";
-            echo " <br>";
-        }else {
-            echo "todavia no tienes la posibilidad de mejorar, sigue luchando!";
-            echo " <br>";
-        }
+    public function mejorarCasa($personaje){
+        $personaje->devolverPuntos();
+        if($personaje->devolverPuntos()>='10' && $personaje->devolverPuntos() < '15'){
+        $eleccion=1;
+        if($eleccion == '1'){
+            $objetos = new Objeto();
+            echo '<h3>casas:</h3>';
+            $objetos->establecer_casa('
+            madera,
+            enhorabuena ya tienes tu casa de madera,
+            ');
+            return $objetos->obtener_casa();
+            }else{
+                echo 'los puntos se acumulan';
+            }
         }
     }
-*/
+    public function mejorarArma($personaje){
+        if($personaje->devolverPuntos()>='15'){
+            echo '<h3>Aqui podemos elegir entre armas o casas:</h3>';
+            $eleccion=1;
+            if($eleccion == '1'){
+                $objetos = new Objeto();
+                $objetos->establecer_arma('
+                espada,
+                Enhorabuena has obtenido una espada
+                ');
+                 return $objetos->obtener_arma();
+            }else {
+                $objetos = new Objeto();
+                echo '<h3>casas:</h3>';
+                $objetos->establecer_casa('
+                madera,
+                seguir acumulando puntos,
+                ');
+                return $objetos->obtener_casa();
+            }
+        }else{
+            echo 'Sigue intentandolo';
+        }  
+    }
 }
