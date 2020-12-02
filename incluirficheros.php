@@ -1,5 +1,6 @@
 <?php
     //Fichero para incluir ficheros
+    require_once 'sql.php';
     require_once 'conexion.php';
     require_once 'personajes.php';
     require_once 'batalla.php';

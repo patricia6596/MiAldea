@@ -10,12 +10,12 @@ create table jugadores (
     nombre varchar(20),
     nick varchar(10) unique,
     contr varchar(10),
-    personaje enum('null', 'guerrero', 'arquero', 'mago'),
+    personaje enum('guerrero', 'arquero', 'mago'),
     casa enum('paja', 'madera', 'ladrillo'),
-    arma enum('null','nivel1', 'nivel2', 'nivel3'),
+    arma enum('nivel1', 'nivel2', 'nivel3'),
     control enum('control')
 );
-insert into jugadores values (default, 'Patricia', 'patri', 'holaP123', 'null', 'paja', 'nivel1', 'control');
+insert into jugadores values (default, 'Patricia', 'patri', 'holaP123', 'mago', 'paja', 'nivel1', 'control');
 select * from jugadores;
 update jugadores set personaje='mago' where nick='patri';
 delete from jugadores where nick='patric';
