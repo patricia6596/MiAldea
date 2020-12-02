@@ -54,7 +54,7 @@
             return $this->puntos;
         }
         public function __toString(){
-            return "El personaje se llama $this->nombre";
+            return "El personaje se llama $this->nick";
         }
     }
 ?>
