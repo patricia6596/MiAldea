@@ -6,6 +6,5 @@
             $this->resultado=rand(1,3);
             return $this->resultado;
         }
-
 }
 
