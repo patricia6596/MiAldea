@@ -1,10 +1,9 @@
 <?php
     //Para hacer consultas sql, insert o update 
     //Se aplicara el patron Active Record pattern
-    require_once 'controlador/conexion.php';
-    class Sql extends Db{
-        public function __construct(){
-            $this->db=$this->conectar();
+    class Jugadores {
+        public function __construct(PDO $conexion){
+            $this->db=$conexion;
         }
         public function consultar($campo, $valor){
             $select = $this->db -> prepare("select * from jugadores where $campo='$valor'");

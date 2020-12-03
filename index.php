@@ -37,8 +37,9 @@
     //echo $objeto1->mejorarArma($personaje1);
 
     echo 'Conectando a la base de datos<br>';
-    $conexion=new Sql();
-    echo $conexion->consultarMejora('nick','patri','casa');
+    $conexion=new Db();
+    $modificacion=new Jugadores($conexion);
+    echo $modificacion->consultar('nick','patri','casa');
     echo "<br>";
     //$conexion->insertar($personaje1->getNombre(), $personaje1->getNick(), $personaje1->getContr(), $personaje1->getTipo(), $personaje1->getCasa(), $personaje1->getArma());
     echo "<br>";
