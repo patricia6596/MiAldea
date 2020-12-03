@@ -1,7 +1,7 @@
 <?php
     //Para hacer consultas sql, insert o update 
     //Se aplicara el patron Active Record pattern
-    require_once 'conexion.php';
+    require_once '../controlador/conexion.php';
     class Sql extends Db{
         public function __construct(){
             $this->db=$this->conectar();

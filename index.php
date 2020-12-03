@@ -1,5 +1,5 @@
 <?php
-    require_once 'incluirficheros.php';
+    require_once 'controlador/incluirficheros.php';
     $personaje1=New Guerrero('Javis','pechuss','soytontso');
     echo $personaje1;
     echo " <br>";
