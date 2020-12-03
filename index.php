@@ -33,15 +33,15 @@
     echo '<h2>Crear objetos</h2>';
 
     $objeto1= new Objeto();
-    echo $objeto1->mejorarCasa($personaje1);
-    echo $objeto1->mejorarArma($personaje1);
+    echo $objeto1->mejorarCasa($personaje1,$personaje1->getNick());
+    //echo $objeto1->mejorarArma($personaje1);
 
     echo 'Conectando a la base de datos<br>';
-    $conexion=new Db();
-    echo $conexion->consultar('nick','pechus');
+    $conexion=new Sql();
+    echo $conexion->consultarMejora('nick','patri','casa');
     echo "<br>";
-    $conexion->insertar($personaje1->getNombre(), $personaje1->getNick(), $personaje1->getContr(), $personaje1->getTipo(), $personaje1->getCasa(), $personaje1->getArma());
+    //$conexion->insertar($personaje1->getNombre(), $personaje1->getNick(), $personaje1->getContr(), $personaje1->getTipo(), $personaje1->getCasa(), $personaje1->getArma());
     echo "<br>";
     $personaje2=new Arquero('Patricia','pattricia','adios');
-    $conexion->insertar($personaje2->getNombre(), $personaje2->getNick(), $personaje2->getContr(), $personaje2->getTipo(), $personaje2->getCasa(), $personaje2->getArma());
+    //$conexion->insertar($personaje2->getNombre(), $personaje2->getNick(), $personaje2->getContr(), $personaje2->getTipo(), $personaje2->getCasa(), $personaje2->getArma());
 ?>
