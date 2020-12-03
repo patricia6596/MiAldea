@@ -1,12 +1,12 @@
 <?php
     //Fichero para incluir ficheros
-    require_once 'sql.php';
-    require_once 'conexion.php';
-    require_once 'personajes.php';
-    require_once 'batalla.php';
-    require_once 'guerrero.php';
-    require_once 'arquero.php';
-    require_once 'mago.php';
-    require_once 'objetos.php';
+    require_once 'modelo/sql.php';
+    require_once 'controlador/conexion.php';
+    require_once 'modelo/personajes.php';
+    require_once 'modelo/batalla.php';
+    require_once 'modelo/guerrero.php';
+    require_once 'modelo/arquero.php';
+    require_once 'modelo/mago.php';
+    require_once 'modelo/objetos.php';
     
 ?>
