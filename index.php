@@ -32,8 +32,8 @@
 
     echo '<h2>Crear objetos</h2>';
 
-    $objeto1= new Objeto();
-    echo $objeto1->mejorarCasa($personaje1,$personaje1->getNick());
+    $objeto1= new Casa();
+    echo $objeto1->mejorarObjeto($personaje1,$personaje1->getNick());
     //echo $objeto1->mejorarArma($personaje1);
 
     echo 'Conectando a la base de datos<br>';
