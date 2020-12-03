@@ -1,7 +1,7 @@
 # MiAldea
 <b>Proyect of Implementation of Web Applications</b>
 </br>
-hola hoy hemos creado el sistema de batallas 
+Hola hoy hemos creado nuestra aplicación web en <b>PHP</b> con <b>POO</b> que simula un sistema de batallas. 
 </br>
 En <b>conexion.php</b> dentro del directorio controlador se ha implementado el patron Singleton, ya que solo queremos que se instancie una conexion
 </br>
