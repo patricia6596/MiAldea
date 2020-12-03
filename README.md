@@ -3,6 +3,7 @@
 </br>
 Hola hoy hemos creado nuestra aplicación web en <b>PHP</b> con <b>POO</b> que simula un sistema de batallas. 
 </br>
-En <b>conexion.php</b> dentro del directorio controlador se ha implementado el patron Singleton, ya que solo queremos que se instancie una conexion.
+<ul>
+<li>En <b>conexion.php</b> dentro del directorio controlador se ha implementado el patron Singleton, ya que solo queremos que se instancie una conexion.</li>
 </br>
-En <b>objetos.php</b> dentro del directorio modelo se ha implementado el patron Abstract Factory, ya que se trata de familia de objetos.
+<li>En <b>objetos.php</b> dentro del directorio modelo se ha implementado el patron Abstract Factory, ya que se trata de familia de objetos.</li>
