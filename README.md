@@ -7,3 +7,5 @@ Hola hoy hemos creado nuestra aplicación web en <b>PHP</b> con <b>POO</b> que s
 <li>En <b>conexion.php</b> dentro del directorio controlador se ha implementado el patron <b>Singleton</b>, ya que solo queremos que se instancie una conexion.</li>
 </br>
 <li>En <b>objetos.php</b> dentro del directorio modelo se ha implementado el patron <b>Abstract Factory</b>, ya que se trata de familia de objetos.</li>
+</br>
+<li> En <b>sql.php</b> dentro del directorio modelo se ha implementado el patron <b>Active records</b>, ya que se trata del archivo que manipula una tabla de la base de datos.</li>
