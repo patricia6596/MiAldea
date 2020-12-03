@@ -38,5 +38,14 @@
             $delete = $this->db -> prepare("delete from jugadores where nick='$nick'");
             $delete -> execute();
         }
+
+        public function consultarMejora($campo, $valor,$objeto){
+            $select = $this->db -> prepare("select $objeto from jugadores where $campo='$valor'");
+            $select -> execute();
+            $lista = $select -> fetchAll(PDO::FETCH_ASSOC);
+            foreach($lista as $usuario) {
+                return $usuario["$objeto"];
+            }
+        }
     }
 ?>
