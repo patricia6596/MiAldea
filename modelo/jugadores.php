@@ -2,8 +2,8 @@
     //Para hacer consultas sql, insert o update 
     //Se aplicara el patron Active Record pattern
     class Jugadores {
-        public function __construct(PDO $conexion){
-            $this->db=$conexion;
+        public function __construct(Db $conexion){
+            $this->db=$conexion->conectar();
         }
         public function consultar($campo, $valor){
             $select = $this->db -> prepare("select * from jugadores where $campo='$valor'");

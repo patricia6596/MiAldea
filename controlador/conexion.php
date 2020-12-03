@@ -8,7 +8,7 @@
         private static $pdo_options = array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8");
         protected $db;
         
-        protected function conectar(){
+        public function conectar(){
             if ( is_null( self::$conexion ) ) {
                 try {
                     self::$conexion = new PDO( 
