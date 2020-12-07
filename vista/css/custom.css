@@ -1,3 +1,10 @@
 .mibg{
-    background-color:#D0D0D0;
+    background-color:#d30e0e;
+    
+}
+li{
+    list-style:none;
+}
+.fondo{
+   background-color: blue;
 }

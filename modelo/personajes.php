@@ -34,7 +34,8 @@
         public function getArma(){
             return $this->arma;
         }
-        public function luchar($resultado){
+        public function luchar(Batalla $batalla){
+            $resultado=$batalla->devolverResultado();
             //Llama a la funcion luchan de personajes
             if($resultado==1){
                 //Gana

@@ -17,14 +17,29 @@
                 };
             }
         }
+        //iniciar sesion
+        public function iniciar($nick,$contr){
+            $select = $this->db -> prepare("select * from jugadores where nick='$nick' and contr='$contr'");
+            $select -> execute();
+            $lista = $select -> fetchAll(PDO::FETCH_ASSOC);
+            foreach($lista as $usuario) {
+                if ($usuario['control']=='control'){
+                    return 1;
+                }else{
+                    return 0;
+                };
+            }
+        }
         //insertar se usara a la hora de crear un personaje
-        public function insertar($nom, $nick, $contr, $tipo, $casa, $arma){
+        public function insertar($nom, $nick, $contr, $tipo){
             if(!$this->consultar('nick',$nick)){
-                $insert = $this->db -> prepare("insert into jugadores values (default, '$nom', '$nick', '$contr', '$tipo', '$casa', '$arma', 'control')");
+                $insert = $this->db -> prepare("insert into jugadores values (default, '$nom', '$nick', '$contr', '$tipo', 'paja', 'nivel1', 'control')");
                 $insert -> execute();
                 echo "Usuario agregado correctamente";
+                echo "<a href='../vista/usuario.php'>Ve a tu sesion</a>";
             }else{
                 echo "Este usuario ya existe";
+                echo "<a href='../vista/index.php'>Vuelve a inicio</a>";
             }
         }
         //actualizar se usara a la hora de mejorar arma o mejorar casa

@@ -10,22 +10,22 @@
 // de alto nivel. Normalmente, las funciones de una familia
 // pueden colaborar entre sí.
 interface Objeto {
-    public function mejorarObjeto($personaje,$nick);
+    public function mejorarObjeto(Personaje $personaje);
 }
 
 class Casa implements Objeto  {
     //Función para mejorar la casa pasandole el objeto creado llamado
     //personaje
-    public function mejorarObjeto($personaje,$nick){
+    public function mejorarObjeto(Personaje $personaje){
         //instancia el método
         $personaje->devolverPuntos();
         //condicional que te establece una casa si consigue 10 puntos o si los almacena
         if($personaje->devolverPuntos()>='10'){
             $mejora_casa=new Sql();
-            if($mejora_casa->consultarMejora('nick',"$nick",'casa')=='paja'){
-                $mejora_casa->actualizar('casa','madera',"$nick");
-            }elseif($mejora_casa->consultarMejora('nick',"$nick",'casa')=='madera'){
-                $mejora_casa->actualizar('casa','ladrillo',"$nick");
+            if($mejora_casa->consultarMejora('nick',$personaje->getNick(),'casa')=='paja'){
+                $mejora_casa->actualizar('casa','madera',$personaje->getNick());
+            }elseif($mejora_casa->consultarMejora('nick',$personaje->getNick(),'casa')=='madera'){
+                $mejora_casa->actualizar('casa','ladrillo',$personaje->getNick());
             }
             }else{
                 echo "Todavia no se puede la mejorar casa, siga intentandolo";
@@ -36,17 +36,17 @@ class Casa implements Objeto  {
 class Arma implements Objeto {
     //Función para mejorar el arma pasandole el objeto creado llamado
     //personaje
-    public function mejorarObjeto($personaje,$nick){
+    public function mejorarObjeto(Personaje $personaje){
         //instancia el método
         $personaje->devolverPuntos();
         //condicional que te establece un arma si consigue 15 puntos 
         if($personaje->devolverPuntos()>='15'){
             $mejora_arma=new Sql();
             echo '<h3>Aqui podemos elegir entre armas o casas:</h3>';
-            if($mejora_arma->consultarMejora('nick',"$nick",'arma')=='nivel1'){
-                $mejora_arma->actualizar('arma','nivel2',"$nick");
-            }elseif($mejora_arma->consultarMejora('nick',"$nick",'arma')=='nivel2'){
-                $mejora_arma->actualizar('arma','nivel3',"$nick");
+            if($mejora_arma->consultarMejora('nick',$personaje->getNick(),'arma')=='nivel1'){
+                $mejora_arma->actualizar('arma','nivel2',$personaje->getNick());
+            }elseif($mejora_arma->consultarMejora('nick',$personaje->getNick(),'arma')=='nivel2'){
+                $mejora_arma->actualizar('arma','nivel3',$personaje->getNick());
             }
             }else{
                 echo "Todavia no se puede la mejorar casa, siga intentandolo";
