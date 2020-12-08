@@ -49,10 +49,10 @@
 								</div>
 								<div class="col-md-5 mt-5 ">
 									<li>
-										<button type="submit" class="btn btn-dark m-1" name='mejorarPersonaje' value='mejorarPersonaje'>Mejorar Personaje</button>
+										<button type="submit" class="btn btn-dark m-1" name='mejorarPersonaje' value='mejorarPersonaje' data-toggle="popover" data-trigger="hover" data-content="Solo se podra mejorar el personaje si se tiene al menos 15 puntos">Mejorar Personaje</button>
 									</li>
 									<li>
-										<button type="submit" class="btn btn-dark m-1" name='mejorarCasa' value='mejorarCasa'>Mejorar Casa</button>
+										<button type="submit" class="btn btn-dark m-1" name='mejorarCasa' value='mejorarCasa' data-toggle="popover" data-trigger="hover" data-content="Solo se podra mejorar la casa si se tiene al menos 10 puntos">Mejorar Casa</button>
 									</li>
 									<li>
 									<button type="submit" class="btn btn-dark m-1" name='luchar' value='luchar'>Batalla</button>
@@ -64,5 +64,10 @@
 				</div>
 			</form>	
 		</div>
+		<script>
+    		$(function () {
+       			$('[data-toggle="popover"]').popover()
+    		});
+		</script>
 	</body>
 </html>
