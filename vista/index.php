@@ -6,7 +6,7 @@
 	$conexion=new Db();
 	
 ?>
-<li class="display-4 text-center text-white bg-dark navbar-dark">Preparate para la lucha</li>
+<li class="display-4 text-center text-dark font-weight-bold navbar-dark">Preparate para la lucha</li>
 			<ul class="nav">
 				<li>
 					<button type="button" class="btn btn-dark m-1" data-toggle="modal" data-target="#login">Login</button>

@@ -49,10 +49,10 @@
                 $insert -> execute();
                 echo "<p>Usuario agregado correctamente</p>";
                 echo "<p>Inicie sesion para poder jugar</p>";
-                echo "<a href='../vista/index.php'>Vuelve a inicio</a>";
+                header('refresh:1;url=../vista/index.php');
             }else{
                 echo "Este usuario ya existe";
-                echo "<a href='../vista/index.php'>Vuelve a inicio</a>";
+                header('refresh:1;url=../vista/index.php');
             }
         }
         //actualizar se usara a la hora de mejorar arma o mejorar casa o actualizar los puntos

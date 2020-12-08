@@ -14,7 +14,5 @@
         public function devolverResultado(){
             return $this->resultado;
         }
-
-
-}
+    }
 ?>

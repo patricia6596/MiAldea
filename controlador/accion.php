@@ -18,7 +18,7 @@
     if(isset($_POST['registrar'])){
         if($modificacion->insertar( $_POST["nombre"],$_POST["nick"],$_POST["contr"],$_POST["tipo"])){
             echo "Registrado con exito";
-            header('refresh:1;url=../vista/index.php');
+            
         }
     }
     if(isset($_POST['mejorarPersonaje'])){
