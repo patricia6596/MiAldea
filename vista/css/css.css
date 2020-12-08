@@ -10,3 +10,7 @@ li{
     height: 100vh;
     background-repeat: no-repeat;
 }
+.accion{
+    background-color:#D0D0D0;
+    font-weight: bold;
+}

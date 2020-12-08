@@ -9,4 +9,5 @@
     require_once '../modelo/mago.php';
     require_once '../modelo/objetos.php';
     require_once '../controlador/accion.php';
+    
 ?>

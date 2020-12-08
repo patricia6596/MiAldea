@@ -24,6 +24,9 @@
 							<div>       
 			<form method="post" action="../controlador/accion.php" class="form">
 								<ul class="nav">
+								<li>
+									<button type="submit" class="btn btn-dark m-1" name='borrar' value='borrar'>Borrar</button>
+									</li>
 									<li>
 									<button type="submit" class="btn btn-dark m-1" name='salir' value='salir'>Cerrar sesion</button>
 									</li>

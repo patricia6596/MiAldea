@@ -1,5 +1,6 @@
 <?php
     require_once '../controlador/incluirficheros.php';
+    
     $conexion=new Db();
     $modificacion=new Jugadores($conexion);
 
@@ -8,15 +9,16 @@
             echo "Has iniciado sesion";
             session_start();
             $_SESSION['user']=$_POST['nick'];
-            echo "<a href='../vista/usuario.php'>Ve a tu sesion</a>";
+            header('refresh:1;url=../vista/usuario.php');
        }else{
             echo "Este usuario no existe";
-            echo "<a href='../vista/index.php'>Vuelve a inicio</a>";
+            header('refresh:1;url=../vista/index.php');
        }
     } 
     if(isset($_POST['registrar'])){
         if($modificacion->insertar( $_POST["nombre"],$_POST["nick"],$_POST["contr"],$_POST["tipo"])){
             echo "Registrado con exito";
+            header('refresh:1;url=../vista/index.php');
         }
     }
     if(isset($_POST['mejorarPersonaje'])){
@@ -59,6 +61,14 @@
         $personaje->actualizarPersonaje($nick);
         $batalla=new Batalla();
         $personaje->luchar($batalla);
+    }
+    if(isset($_POST['borrar'])){
+        session_start();
+        $nick=$_SESSION['user'];
+        $conexion=new Db();
+        $modificacion=new Jugadores($conexion);
+        $modificacion->borrar($nick);
+        header('Location: ../vista/index.php');
     }
     if(isset($_POST['salir'])){
         session_destroy();
