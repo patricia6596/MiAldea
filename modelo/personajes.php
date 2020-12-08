@@ -38,7 +38,6 @@
             $conexion=new Db();
             $modificacion=new Jugadores($conexion);
             $lista=$modificacion->devolverDatos($nick);
-            echo $lista['puntos'];
 		    $this->puntos=$lista['puntos'];
 		    $this->casa=$lista['casa'];
             $this->arma=$lista['arma'];

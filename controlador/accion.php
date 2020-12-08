@@ -19,6 +19,32 @@
             echo "Registrado con exito";
         }
     }
-
-
+    if(isset($_POST['mejorarPersonaje'])){
+        session_start();
+        $nick=$_SESSION['user'];
+        $conexion=new Db();
+        $modificacion=new Jugadores($conexion);
+        $vector=$modificacion->devolverDatos($nick);
+        $nombre=$vector['nombre'];
+        $contr=$vector['contr'];
+        $personaje=new Personaje($nombre, $nick, $contr);
+        $personaje->actualizarPersonaje($nick);
+        $arma=new Arma;
+        $arma->mejorarObjeto($personaje);
+        header('Location: ../vista/usuario.php');
+    }
+    if(isset($_POST['mejorarCasa'])){
+        session_start();
+        $nick=$_SESSION['user'];
+        $conexion=new Db();
+        $modificacion=new Jugadores($conexion);
+        $vector=$modificacion->devolverDatos($nick);
+        $nombre=$vector['nombre'];
+        $contr=$vector['contr'];
+        $personaje=new Personaje($nombre, $nick, $contr);
+        $personaje->actualizarPersonaje($nick);
+        $casa=new Casa;
+        $casa->mejorarObjeto($personaje);
+        header('Location: ../vista/usuario.php');
+    }
 ?>

@@ -34,28 +34,30 @@
 	</nav>
 </div>
 
-        
+ 
         <div class="container">
 		    <div class="text-center">
-                <img src="img/casas/casa de paja.jpg" style="width: 500px;">
+                <img src="img/casa/<?php echo $personaje->getCasa().".jpg"?>" style="width: 500px;">
             </div>	
 			
 			<div class="row justify-content-center ">
 				<div class="col-11">
 					<div class="row justify-content-around bg-light rounded p-3 m-2">
 						<div class="col-md-5">
-							<img src="img/guerrero/guerrero1.png" class="img-fluid rounded">
+							<img src="img/<?php echo $personaje->getTipo()."/". $personaje->getArma().".png" ?> " class="img-fluid rounded">
                         </div>
                         <div class="col-md-5 mt-5 ">
+						<form method="post" action="../controlador/accion.php" class="form">
 							<li>
-								<button type="button" class="btn btn-dark m-1 ">Mejorar Personaje</button>
+								<button type="submit" class="btn btn-dark m-1" name='mejorarPersonaje' value='mejorarPersonaje'>Mejorar Personaje</button>
 							</li>
 							<li>
-								<button type="button" class="btn btn-dark m-1">Mejorar Casa</button>
+								<button type="submit" class="btn btn-dark m-1" name='mejorarCasa' value='mejorarCasa'>Mejorar Casa</button>
 							</li>
 							<li>
-								<button type="button" class="btn btn-dark m-1">Batalla</button>
+								<button type="button" class="btn btn-dark m-1" >Batalla</button>
 							</li>
+						</form>		
                         </div>
 					</div>
 				</div>

@@ -45,7 +45,7 @@
         //insertar se usara a la hora de crear un personaje
         public function insertar($nom, $nick, $contr, $tipo){
             if(!$this->consultar('nick',$nick)){
-                $insert = $this->db -> prepare("insert into jugadores values (default, '$nom', '$nick', '$contr', '$tipo', 'paja', 'nivel1', 0, 'ontrolc')");
+                $insert = $this->db -> prepare("insert into jugadores values (default, '$nom', '$nick', '$contr', '$tipo', 'paja', 'nivel1', 0, 'control')");
                 $insert -> execute();
                 echo "<p>Usuario agregado correctamente</p>";
                 echo "<p>Inicie sesion para poder jugar</p>";

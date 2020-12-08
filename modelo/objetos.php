@@ -21,7 +21,8 @@ class Casa implements Objeto  {
         $personaje->devolverPuntos();
         //condicional que te establece una casa si consigue 10 puntos o si los almacena
         if($personaje->devolverPuntos()>='10'){
-            $mejora_casa=new Sql();
+            $conexion=new Db();
+            $mejora_casa=new Jugadores($conexion);
             if($mejora_casa->consultarMejora('nick',$personaje->getNick(),'casa')=='paja'){
                 $mejora_casa->actualizar('casa','madera',$personaje->getNick());
             }elseif($mejora_casa->consultarMejora('nick',$personaje->getNick(),'casa')=='madera'){
@@ -41,7 +42,8 @@ class Arma implements Objeto {
         $personaje->devolverPuntos();
         //condicional que te establece un arma si consigue 15 puntos 
         if($personaje->devolverPuntos()>='15'){
-            $mejora_arma=new Sql();
+            $conexion=new Db();
+            $mejora_arma=new Jugadores($conexion);
             echo '<h3>Aqui podemos elegir entre armas o casas:</h3>';
             if($mejora_arma->consultarMejora('nick',$personaje->getNick(),'arma')=='nivel1'){
                 $mejora_arma->actualizar('arma','nivel2',$personaje->getNick());
