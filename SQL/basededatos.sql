@@ -13,10 +13,13 @@ create table jugadores (
     personaje enum('guerrero', 'arquero', 'mago'),
     casa enum('paja', 'madera', 'ladrillo'),
     arma enum('nivel1', 'nivel2', 'nivel3'),
+    puntos int,
     control enum('control')
 );
-insert into jugadores values (default, 'Patricia', 'patri', 'holaP123', 'mago', 'paja', 'nivel1', 'control');
+insert into jugadores values (default, 'Patricia', 'patri', 'holaP123', 'mago', 'paja', 'nivel1', 0, 'control');
 select * from jugadores;
 update jugadores set personaje='mago' where nick='patri';
+update jugadores set casa='ladrillo' where nick='patricia';
+update jugadores set puntos=80 where nick='patricia';
 delete from jugadores where nick='patric';
 select * from jugadores where nick='nora';

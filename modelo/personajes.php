@@ -34,6 +34,16 @@
         public function getArma(){
             return $this->arma;
         }
+        public function actualizarPersonaje($nick){
+            $conexion=new Db();
+            $modificacion=new Jugadores($conexion);
+            $lista=$modificacion->devolverDatos($nick);
+            echo $lista['puntos'];
+		    $this->puntos=$lista['puntos'];
+		    $this->casa=$lista['casa'];
+            $this->arma=$lista['arma'];
+             $this->tipo=$lista['tipo'];
+        }
         public function luchar(Batalla $batalla){
             $resultado=$batalla->devolverResultado();
             //Llama a la funcion luchan de personajes
@@ -52,10 +62,13 @@
             }
         }
         public function devolverPuntos(){
+            $conexion=new Db();
+            $modificacion=new Jugadores($conexion);
+            $modificacion->actualizar('puntos', $this->puntos, $this->getNick());
             return $this->puntos;
         }
         public function __toString(){
-            return "El personaje se llama $this->nick";
+            return "El personaje se llama $this->nick, $this->tipo, $this->casa, $this->puntos, $this->arma";
         }
     }
 ?>

@@ -24,7 +24,7 @@
 				  		<img class="card-img-top" src="img/guerrero/guerrero1.png" alt="">
 				  		<div class="card-body">
 							<h4 class="card-title text-center">
-								<input type="radio" data-toggle="modal" data-target="#registro" name="tipo" value="guerrero">Guerrero
+								<input type="radio" data-toggle="modal" data-target="#registro" name="tipo" value="Guerrero">Guerrero
 							</h4>
 					  	</div>
 					</div>
@@ -35,7 +35,7 @@
 				  		<img class="card-img-top" src="img/mago/mago1.png" alt="">
 				  		<div class="card-body">
 							<h4 class="card-title text-center">
-								<input type="radio" data-toggle="modal" data-target="#registro" name="tipo" value="mago">Mago
+								<input type="radio" data-toggle="modal" data-target="#registro" name="tipo" value="Mago">Mago
 							</h4>
 					  	</div>
 					</div>
@@ -46,7 +46,7 @@
 				  		<img class="card-img-top" src="img/arquero/arquero1.png" alt="">
 				  		<div class="card-body">
 							<h4 class="card-title text-center">
-								<input type="radio" data-toggle="modal" data-target="#registro" name="tipo" value="arquero">Arquero
+								<input type="radio" data-toggle="modal" data-target="#registro" name="tipo" value="Arquero">Arquero
 							</h4>
 						</div>
 			  		</div> 
