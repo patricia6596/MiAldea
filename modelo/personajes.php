@@ -34,6 +34,7 @@
         public function getArma(){
             return $this->arma;
         }
+        //Se utilizara cuando estamos en la pagina usuario.php para poder utilizar el personaje con sus datos reales
         public function actualizarPersonaje($nick){
             $conexion=new Db();
             $modificacion=new Jugadores($conexion);
@@ -43,6 +44,7 @@
             $this->arma=$lista['arma'];
              $this->tipo=$lista['tipo'];
         }
+        //Realiza la batalla
         public function luchar(Batalla $batalla){
             $resultado=$batalla->devolverResultado();
             //Llama a la funcion luchan de personajes
@@ -61,6 +63,7 @@
             }
             $this->actualizarPuntos();
         }
+        //Inserta en la tabla los puntos del personaje
         public function actualizarPuntos(){
             $conexion=new Db();
             $modificacion=new Jugadores($conexion);
