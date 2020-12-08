@@ -21,7 +21,7 @@
 			<div class="row pt-5">
 			  	<div class="col-lg-4 col-md-6 mb-4 mt-4">
 					<div class="card h-100">
-				  		<img class="card-img-top" src="img/guerrero/guerrero1.png" alt="">
+				  		<img class="card-img-top" src="img/guerrero/nivel1.png" alt="">
 				  		<div class="card-body">
 							<h4 class="card-title text-center">
 								<input type="radio" data-toggle="modal" data-target="#registro" name="tipo" value="Guerrero">Guerrero
@@ -32,7 +32,7 @@
 			
 			  	<div class="col-lg-4 col-md-6 mb-4 mt-4">
 					<div class="card h-100">
-				  		<img class="card-img-top" src="img/mago/mago1.png" alt="">
+				  		<img class="card-img-top" src="img/mago/nivel1.png" alt="">
 				  		<div class="card-body">
 							<h4 class="card-title text-center">
 								<input type="radio" data-toggle="modal" data-target="#registro" name="tipo" value="Mago">Mago
@@ -43,7 +43,7 @@
 
 			  	<div class="col-lg-4 col-md-6 mb-4 mt-4">
 					<div class="card h-100">
-				  		<img class="card-img-top" src="img/arquero/arquero1.png" alt="">
+				  		<img class="card-img-top" src="img/arquero/nivel1.png" alt="">
 				  		<div class="card-body">
 							<h4 class="card-title text-center">
 								<input type="radio" data-toggle="modal" data-target="#registro" name="tipo" value="Arquero">Arquero

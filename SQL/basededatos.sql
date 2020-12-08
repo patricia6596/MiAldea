@@ -19,7 +19,8 @@ create table jugadores (
 insert into jugadores values (default, 'Patricia', 'patri', 'holaP123', 'mago', 'paja', 'nivel1', 0, 'control');
 select * from jugadores;
 update jugadores set personaje='mago' where nick='patri';
-update jugadores set casa='ladrillo' where nick='patricia';
-update jugadores set puntos=80 where nick='patricia';
+update jugadores set casa='paja' where nick='patricia';
+update jugadores set arma='nivel1' where nick='patricia';
+update jugadores set puntos=30 where nick='patricia';
 delete from jugadores where nick='patric';
 select * from jugadores where nick='nora';

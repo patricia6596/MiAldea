@@ -3,10 +3,8 @@
         private $resultado;
 
         public function __construct(){
-           echo 'Vas a luchar';
-           sleep(3);
-           $this->resultadoBatalla();
-
+            header('Location: ../vista/combate.php');
+            $this->resultadoBatalla();
         } 
 
         private function resultadoBatalla(){

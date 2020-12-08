@@ -47,4 +47,21 @@
         $casa->mejorarObjeto($personaje);
         header('Location: ../vista/usuario.php');
     }
+    if(isset($_POST['luchar'])){
+        session_start();
+        $nick=$_SESSION['user'];
+        $conexion=new Db();
+        $modificacion=new Jugadores($conexion);
+        $vector=$modificacion->devolverDatos($nick);
+        $nombre=$vector['nombre'];
+        $contr=$vector['contr'];
+        $personaje=new Personaje($nombre, $nick, $contr);
+        $personaje->actualizarPersonaje($nick);
+        $batalla=new Batalla();
+        $personaje->luchar($batalla);
+    }
+    if(isset($_POST['salir'])){
+        session_destroy();
+        header('Location: ../vista/index.php');
+    }
 ?>

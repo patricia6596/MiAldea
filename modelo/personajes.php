@@ -59,11 +59,15 @@
                 $this->puntos=$this->puntos-1;
                 echo "Has perdido te quitan 1 puntos";
             }
+            $this->actualizarPuntos();
         }
-        public function devolverPuntos(){
+        public function actualizarPuntos(){
             $conexion=new Db();
             $modificacion=new Jugadores($conexion);
             $modificacion->actualizar('puntos', $this->puntos, $this->getNick());
+            return $this->puntos;
+        }
+        public function devolverPuntos(){
             return $this->puntos;
         }
         public function __toString(){
